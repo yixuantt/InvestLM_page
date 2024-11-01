@@ -42,6 +42,10 @@ body {
   flex: 1; /* Ensures both buttons take equal space */
   text-align: center; /* Centers the text within the button */
 }
+.disable-hover-click {
+  pointer-events: none;
+}
+
 .box {
   cursor: pointer;
   background-color: #e3eef7;
