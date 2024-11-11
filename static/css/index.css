@@ -4,6 +4,35 @@ body {
   height: 100vh; 
 }
 
+.footer-section {
+  background-color: #2b2b2b;
+  border-top: 1px solid #3a3a3a;
+}
+
+.footer-content {
+  text-align: center;
+  color: #ffffff;
+  line-height: 1.4; /* 减少行高 */
+}
+
+.footer-content p {
+  font-size: 14px; /* 稍微减小字体 */
+  margin: 0;
+}
+
+.footer-content a {
+  color: #3498db;
+  text-decoration: underline;
+  transition: color 0.3s ease;
+}
+
+.footer-content a:hover {
+  color: #2980b9;
+}
+
+.footer-links {
+  margin-bottom: 0.5rem; /* 减少底部间距 */
+}
 .hero.is-small.custom-width {
   max-width: 1300px; /* 设置你所需的宽度，比如800px */
   margin: 0 auto;  /* 居中对齐 */
@@ -22,21 +51,101 @@ body {
   font-variant: small-caps;
 }
 
+.gradient {
+  background: linear-gradient(-45deg, #cce3f2, #cbe8fb, #cedbe0, #b8b8b8);
+  background-size: 600% 600%;
+  animation: gradientBG 8s ease infinite;
+  max-width: 1200px;  align-items: center;margin: auto; border-radius: 30px;margin-bottom: 10px;
+  box-shadow: 0 2px 6px rgb(99, 114, 125);
+}
+
+@keyframes gradientBG {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+.images-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 1rem;
+}
+
+.image-wrapper-container {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  flex-wrap: wrap;
+  margin-bottom: 1rem;
+}
+
+.image-wrapper {
+  flex: 1;
+  min-width: 300px;
+  max-width: 500px;
+  text-align: center;
+}
+
+.image-wrapper img {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+  transition: transform 0.3s ease;
+  margin-bottom: 0.5rem;
+}
+
+.image-wrapper img:hover {
+  transform: translateY(-5px);
+}
+
+.caption {
+  font-size: 1rem;
+  color: #333;
+  margin-top: 0.5rem;
+  font-weight: 500;
+}
+
+.note {
+  font-size: 0.9rem;
+  color: #666;
+  font-style: italic;
+  margin-top: 1.5rem;
+  text-align: center;
+}
+
+@media screen and (max-width: 768px) {
+  .image-wrapper-container {
+    gap: 1rem;
+  }
+  
+  .image-wrapper {
+    min-width: 250px;
+  }
+}
+
 .box_container {
   display: flex;
-  flex-wrap: wrap; /* 使子项在多行中显示 */
-  justify-content: space-between; /* 使子项之间均匀分布 */
-  align-items: center; /* 垂直方向居中 */
-  max-width: 1200px; /* 限制容器的最大宽度 */
+  flex-wrap: wrap;
+  justify-content: space-between; 
+  align-items: center;
+  max-width: 1200px;
   margin: auto; 
   gap: 2px; 
 }
 .button-container {
   display: flex;
   justify-content: center;
-  gap: 10px; /* 设置盒子之间的间隔 */
-  padding-left: 300px;
-  padding-right: 300px;
+  gap: 10px; 
 }
 .external-link.button {
   flex: 1; /* Ensures both buttons take equal space */
@@ -54,13 +163,13 @@ body {
   box-shadow: 0 2px 6px rgb(99, 114, 125);
   margin: 5px 5px 24px;
   padding: 20px;
-  flex: 0 1 calc(30% - 10px); /* 使每行的五个盒子有足够的空间和边距 */
+  flex: 0 1 calc(30% - 10px);
   text-align: center;
   box-sizing: border-box;
-  min-height: 80px; /* 设置最小高度以确保所有盒子大小一致 */
-  display: flex; /* 使用Flexbox布局 */
-  justify-content: center; /* 水平居中 */
-  align-items: center; /* 垂直居中 */
+  min-height: 80px; 
+  display: flex; 
+  justify-content: center; 
+  align-items: center; 
 }
 .box h2 {
   font-size: 18px;
